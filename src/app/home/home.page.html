@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>
+        Weather App Forcast
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content [fullscreen]="true">
+    <ion-card>
+      <ion-item>
+        <p>Dublin Weather</p>
+        <ion-label slot="end">
+          {{todayDate | date: "EEE dd MMM"}}
+        </ion-label>
+  
+      </ion-item>
+      <ion-item>
+      <span>
+     Temprature:  {{(weatherTemp.temp - 273).toFixed(0)}}
+    </span>
+  </ion-item>
+  <ion-item>
+    <span>
+   Humidity:  {{(weatherTemp.humidity- 273).toFixed(0)}}
+  </span>
+</ion-item>
+
+
+    </ion-card>
+  </ion-content>
+  
+  
